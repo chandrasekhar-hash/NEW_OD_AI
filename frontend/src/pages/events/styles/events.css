@@ -1,0 +1,70 @@
+/* OD AI HUB — Events Page Styling Tokens */
+:root {
+  --color-coral: #F07861;
+  --color-coral-dark: #DE6A54;
+  --color-coral-light: #FDF1EE;
+  --color-coral-glow: rgba(240, 120, 97, 0.25);
+  --color-navy: #0B1935;
+  --color-navy-rich: #142B50;
+  --color-gold: #D6AD70;
+  --color-ivory: #F8F1E8;
+}
+
+/* Coral badge pulse */
+@keyframes coral-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(240, 120, 97, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(240, 120, 97, 0);
+  }
+}
+
+.coral-pulse-badge {
+  animation: coral-pulse 2.6s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Event card hover elevation */
+.event-card-hover {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
+}
+
+.event-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(11, 25, 53, 0.12), 0 4px 12px -2px rgba(240, 120, 97, 0.08);
+  border-color: rgba(240, 120, 97, 0.35);
+}
+
+/* Hide scrollbar for clean horizontal scrolls */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle image overlay hover */
+.past-event-overlay {
+  background: linear-gradient(180deg, rgba(11, 25, 53, 0.2) 0%, rgba(11, 25, 53, 0.92) 100%);
+  transition: background 0.3s ease;
+}
+.past-event-overlay:hover {
+  background: linear-gradient(180deg, rgba(11, 25, 53, 0.3) 0%, rgba(11, 25, 53, 0.96) 100%);
+}
+
+/* Subtle ambient pulse for hero background */
+@keyframes hero-ambient-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.05);
+  }
+}
+
+.animate-hero-ambient {
+  animation: hero-ambient-pulse 8s ease-in-out infinite;
+}

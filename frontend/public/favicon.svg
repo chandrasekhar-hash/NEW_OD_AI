@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="bronzeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C58D54" />
+      <stop offset="100%" stop-color="#8C592C" />
+    </linearGradient>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C58D54" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#C58D54" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <!-- Outer orbital ring -->
+  <ellipse cx="50" cy="50" rx="38" ry="18" transform="rotate(-30 50 50)" stroke="url(#bronzeGrad)" stroke-width="3" stroke-linecap="round" />
+  <!-- Central planetary circle -->
+  <circle cx="50" cy="50" r="16" fill="#20121E" />
+  <circle cx="50" cy="50" r="13" stroke="#F3E9DD" stroke-width="2" />
+  <!-- Central AI nucleus -->
+  <circle cx="50" cy="50" r="5" fill="#C58D54" />
+  <!-- Satellite node on ring -->
+  <circle cx="78" cy="34" r="5" fill="#C58D54" />
+  <circle cx="78" cy="34" r="9" fill="url(#nodeGlow)" />
+</svg>

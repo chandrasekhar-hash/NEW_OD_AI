@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-ivory: #F7F1E9;
+    --color-champagne: #E8D4B5;
+    --color-bronze: #AD784B;
+    --color-plum: #291D29;
+    --color-burgundy: #492A38;
+    --color-rose: #D9BFC1;
+    --color-mauve: #A98791;
+    --color-softwhite: #FFFDFC;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-plum);
+    overflow-x: hidden;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  ::selection {
+    background-color: rgba(232, 212, 181, 0.45);
+    color: #291D29;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F1E9;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5C2AC;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #AD784B;
+}
+
+/* Editorial Glassmorphism utilities */
+.glass-panel {
+  background: rgba(255, 253, 251, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 212, 181, 0.5);
+  box-shadow: 0 10px 32px -12px rgba(41, 29, 41, 0.05), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.glass-panel-dark {
+  background: rgba(41, 29, 41, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 212, 181, 0.18);
+  box-shadow: 0 24px 48px -12px rgba(20, 12, 20, 0.5);
+}
+
+.glass-pill {
+  background: rgba(255, 253, 251, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 212, 181, 0.5);
+  box-shadow: 0 6px 24px -4px rgba(41, 29, 41, 0.05), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+/* Typography styles */
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-editorial-italic {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+}
+
+/* Antique Bronze Text Gradient (refined, understated, warm) */
+.text-gradient-bronze {
+  background: linear-gradient(135deg, #BE8E62 0%, #AD784B 60%, #95633A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-champagne {
+  background: linear-gradient(135deg, #FFFDFC 0%, #E8D4B5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Atmospheric Editorial Gradients */
+.bg-atmospheric-base {
+  background: 
+    radial-gradient(circle at 18% 12%, rgba(248, 241, 230, 0.95) 0%, rgba(242, 230, 214, 0.6) 35%, transparent 70%),
+    radial-gradient(circle at 82% 20%, rgba(226, 202, 209, 0.5) 0%, rgba(214, 185, 194, 0.3) 35%, transparent 65%),
+    radial-gradient(circle at 50% 55%, rgba(206, 182, 192, 0.2) 0%, transparent 60%),
+    linear-gradient(180deg, #F7F1E9 0%, #F5ECDF 35%, #EDE2D3 70%, #E5D6C5 100%);
+}
+
+.bg-warm-mesh {
+  background: 
+    radial-gradient(circle at 85% 15%, rgba(232, 212, 181, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 15% 45%, rgba(217, 191, 193, 0.18) 0%, transparent 40%),
+    radial-gradient(circle at 75% 85%, rgba(173, 120, 75, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, #F7F1E9 0%, #F2EBE1 50%, #F7F1E9 100%);
+}
+
+.bg-hero-dunes {
+  background: 
+    radial-gradient(ellipse at 70% 30%, rgba(232, 212, 181, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 70%, rgba(217, 191, 193, 0.2) 0%, transparent 50%),
+    linear-gradient(180deg, #F7F1E9 0%, #F3ECDF 70%, #F7F1E9 100%);
+}
+
+/* Native Cinematic Video Integration */
+.cinematic-video-frame {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 16px 36px -16px rgba(73, 42, 56, 0.12), 0 2px 10px -2px rgba(41, 29, 41, 0.04);
+}
+
+.cinematic-video-mask {
+  mask-image: radial-gradient(ellipse 96% 94% at 50% 50%, black 78%, rgba(0,0,0,0.85) 90%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 96% 94% at 50% 50%, black 78%, rgba(0,0,0,0.85) 90%, transparent 100%);
+}
+
+.cinematic-grading {
+  filter: contrast(1.02) brightness(0.99) saturate(0.96);
+}
